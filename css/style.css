@@ -319,14 +319,13 @@ footer a:hover {
     flex-direction: column;
     gap: 10px;
   }
-  .hero-bg-text {
-    padding: 30px 10px;
-    min-height: 150px;
+  .hero-text-container {
+    padding: 15px 10px;
   }
-  .hero-bg-text h1 {
+  .hero-text-container h1 {
     font-size: 1.6rem;
   }
-  .hero-bg-text p {
+  .hero-text-container p {
     font-size: 1rem;
   }
 }
