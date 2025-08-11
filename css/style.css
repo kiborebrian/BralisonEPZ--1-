@@ -1,0 +1,437 @@
+/* Bralison EPZ Website Styles */
+
+/* Color palette from Bralison logo */
+:root {
+  --purple-dark: #5a1243;
+  --green-medium: #486b24;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--white);
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--purple-dark);
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+nav ul li a {
+  font-weight: 600;
+  padding: 7px 12px;
+  display: inline-block;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--green-medium);
+  color: var(--white);
+}
+
+/* Bralison logo in header with black border */
+.logo {
+  height: 80px;
+  vertical-align: middle;
+  padding: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Header layout */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero Section with image background behind text */
+.hero {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-bg-text {
+  background: url('../images/logo.jpg') center center no-repeat;
+  background-size: contain;
+  padding: 60px 20px;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  box-shadow: 0 4px 16px rgba(22, 4, 17, 0.06);
+}
+
+.hero-bg-text::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(90, 18, 67, 0.55); /* Bralison purple overlay */
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.hero-bg-text h1,
+.hero-bg-text p {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+.hero-bg-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hero-bg-text p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* General Sections */
+section {
+  margin: 50px 0;
+}
+
+h2 {
+  color: var(--purple-dark);
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--green-medium);
+  padding-bottom: 8px;
+  width: fit-content;
+}
+h3 {
+  color: var(--purple-dark);
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+  width: fit-content;
+}
+h4{
+  color: var(--purple-dark);
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--green-medium);
+  width: fit-content;
+}
+p, li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--gray-dark);
+}
+
+/* Footer */
+footer {
+  background-color: var(--purple-dark);
+  color: var(--white);
+  padding: 20px 0 10px 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-left h3 {
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Single location icon for entire address block */
+.address-with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.address-with-icon img.footer-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px; /* Align icon vertically with first line */
+}
+
+.address-with-icon address {
+  font-style: normal;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+/* Inline icon-text for phone, email, website */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  filter: brightness(100%) contrast(100%);
+}
+
+/* Footer links */
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Right side social icons */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 auto;
+  margin-top: 10px;
+}
+
+.footer-right a img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(100%) contrast(100%);
+  transition: filter 0.3s ease;
+}
+
+.footer-right a:hover img {
+  filter: brightness(75%) contrast(120%);
+  cursor: pointer;
+}
+
+/* Footer copyright */
+.footer-copy {
+  text-align: center;
+  margin-top: 15px;
+  color: #ddd;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+/* Make all footer/social icons white by default */
+.footer-right a img,
+.icon-text img.footer-icon,
+.address-with-icon img.footer-icon {
+  filter: brightness(0) invert(1); /* white color for black/dark icons */
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* On hover: turn icons black */
+.footer-right a:hover img,
+.icon-text:hover img.footer-icon,
+.address-with-icon:hover img.footer-icon {
+  filter: none; /* original color, black */
+}
+
+/* Make all footer text turn black on hover */
+footer, 
+footer * {
+  transition: color 0.3s ease;
+}
+
+/* Links in footer turn black on hover */
+footer a:hover {
+  color: black !important;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Make normal text inside footer containers turn black on hover of the container */
+.footer-left:hover,
+.footer-right:hover {
+  color: black;
+}
+
+/* Prevent <h3> inside footer-left from turning black on container hover */
+.footer-left:hover h3 {
+  color: var(--white) !important;
+  cursor: default;
+}
+
+/* For the clickable address block wrapped in link (.footer-map-link) */
+.footer-map-link {
+  color: inherit; /* inherit current color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block; /* so the address inside works well */
+}
+
+/* On hover over address link, turn text black */
+.footer-map-link:hover {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Ensure all text inside .footer-map-link changes color on hover */
+.footer-map-link address,
+.footer-map-link address * {
+  color: inherit !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-bg-text {
+    padding: 30px 10px;
+    min-height: 150px;
+  }
+  .hero-bg-text h1 {
+    font-size: 1.6rem;
+  }
+  .hero-bg-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-left, .footer-right {
+    margin: 0 auto;
+  }
+  .footer-right {
+    justify-content: center;
+  }
+}
+.certifications-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* or center */
+}
+
+.certification-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px; /* fixed or flexible width */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.certification-img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(90, 18, 67, 0.15);
+  margin-bottom: 8px;
+}
+   /* Styling for mission and vision with image on the left */
+    .mission-vision-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mission-vision-image {
+      flex: 1 1 350px;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mission-vision-image img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(90, 18, 67, 0.15);
+    }
+
+    .mission-vision-text {
+      flex: 1 1 400px;
+      min-width: 280px;
+    }
+
+    .mission-vision-text section {
+      margin-bottom: 20px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .mission-vision-container {
+        flex-direction: column;
+      }
+
+      .mission-vision-image,
+      .mission-vision-text {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .mission-vision-image {
+        margin-top: 70px;
+      }
+    }
