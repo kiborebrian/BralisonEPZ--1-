@@ -385,29 +385,30 @@ footer a:hover {
   box-shadow: 0 2px 8px rgba(90, 18, 67, 0.15);
   margin-bottom: 8px;
 }
-   /* Styling for mission and vision with image on the left */
+    /* Styling for mission and vision with image centered */
     .mission-vision-container {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
       margin-bottom: 20px;
       flex-wrap: wrap;
     }
 
     .mission-vision-image {
-      flex: 1 1 350px;
-      min-width: 280px;
+      flex: 0 1 400px;
+      min-width: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .mission-vision-image img {
-      max-width: 90%;
+      max-width: 100%;
       height: auto;
       border-radius: 4px;
       box-shadow: 0 4px 12px rgba(90, 18, 67, 0.15);
+      margin: 0 auto;
     }
 
     .mission-vision-text {
